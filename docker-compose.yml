@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  arona-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arona-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: ["python3", "main.py"]
+
