@@ -299,29 +299,13 @@ async def help_music(interaction: discord.Interaction):
     embed.add_field(name="/clearqueue", value="대기열을 전부 정리할 수 있어요!", inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
-@bot.tree.command(name="say", description="봇이 대신 말해줍니다")
-@app_commands.describe(message="전달할 메시지")
-async def say(interaction: discord.Interaction, message: str):
-    print(f"[SAY] Called by {interaction.user} (ID: {interaction.user.id}) with message: {content}")
-
-    await interaction.response.send_message("✅ 메시지를 전달했어요!", ephemeral=True)
-    await interaction.channel.send(message)
-
-@bot.tree.command(name="fortune", description="오늘의 운세를 알려드려요!")
-async def fortune(interaction: discord.Interaction):
-    fortunes = [
-        "🌞 오늘은 행운이 가득한 날이에요! 뭔가 좋은 일이 생길지도 몰라요~",
-        "🌧️ 살짝 우울한 기운이 느껴져요. 하지만 선생님의 미소는 날씨를 바꿀 수 있어요!",
-        "🍀 오늘은 도전하기에 좋은 날이에요! 뭘 하든 좋은 결과가 따를 거예요!",
-        "🌙 조용히 쉬어가는 하루가 필요할지도 몰라요. 무리하지 말고 천천히~",
-        "🔥 열정이 넘치는 하루! 선생님의 에너지로 주변도 환하게 밝힐 수 있어요!",
-        "💤 약간 피곤한 하루일 수 있어요. 오늘은 일찍 쉬는 거 어때요?",
-        "🎁 예기치 못한 선물이 찾아올지도 몰라요! 기대해보셔도 좋아요~",
-        "🤔 판단이 필요한 순간이 올 거예요. 침착하게, 선생님이라면 잘 해내실 거예요!",
-    ]
-    choice = random.choice(fortunes)
-    await interaction.response.send_message(f"🔮 {interaction.user.display_name} 선생님의 오늘의 운세는...\n\n{choice}", ephemeral=True)
-
+# @bot.tree.command(name="say", description="봇이 대신 말해줍니다")
+# @app_commands.describe(message="전달할 메시지")
+# async def say(interaction: discord.Interaction, message: str):
+#     print(f"[SAY] Called by {interaction.user} (ID: {interaction.user.id}) with message: {content}")
+# 
+#     await interaction.response.send_message("✅ 메시지를 전달했어요!", ephemeral=True)
+#     await interaction.channel.send(message)
 
 bot.run(os.getenv("DISCORD_BOT_TOKEN"))
 
