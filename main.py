@@ -297,15 +297,8 @@ async def help_music(interaction: discord.Interaction):
     embed.add_field(name="/shuffle", value="대기열을 랜덤하게 섞어요~", inline=False)
     embed.add_field(name="/nowplaying", value="지금 재생 중인 곡을 보여드려요!", inline=False)
     embed.add_field(name="/clearqueue", value="대기열을 전부 정리할 수 있어요!", inline=False)
+    embed.add_field(name="/randomimg", value="아로나가 랜덤한 그림을 그려드려요!", inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
-
-# @bot.tree.command(name="say", description="봇이 대신 말해줍니다")
-# @app_commands.describe(message="전달할 메시지")
-# async def say(interaction: discord.Interaction, message: str):
-#     print(f"[SAY] Called by {interaction.user} (ID: {interaction.user.id}) with message: {content}")
-# 
-#     await interaction.response.send_message("✅ 메시지를 전달했어요!", ephemeral=True)
-#     await interaction.channel.send(message)
 
 bot.run(os.getenv("DISCORD_BOT_TOKEN"))
 
