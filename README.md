@@ -89,3 +89,15 @@ pip install -r requirements.txt
 touch .env  # 그리고 DISCORD_BOT_TOKEN을 넣어주세요.
 python main.py
 
+---
+
+## 📦 환경변수
+
+```bash
+DISCORD_BOT_TOKEN=
+OPENAI_API_KEY=
+```
+
+
+
+
