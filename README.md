@@ -88,6 +88,7 @@ source venv/bin/activate  # Windows는 venv\Scripts\activate
 pip install -r requirements.txt
 touch .env  # 그리고 DISCORD_BOT_TOKEN을 넣어주세요.
 python main.py
+```
 
 ---
 
