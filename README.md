@@ -1,7 +1,6 @@
 # AronaDiscordBot 🎧
 
 블루 아카이브의 귀여운 AI 조수, **아로나(Arona)** 를 Discord에 소환해 보세요!  
-이 봇은 [arona.ai](https://arona.ai/) 사이트에서 영감을 받아 만들어졌으며, 선생님들과 함께 음악을 들으며 놀 수 있도록 다양한 기능을 제공합니다.
 
 ---
 
